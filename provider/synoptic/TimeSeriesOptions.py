@@ -58,7 +58,7 @@ class TimeSeriesOptions(object):
     def build(self) -> dict:
         return self.query.__dict__
 
-    def set_bounding_box(self, latitude_min: float, latitude_max: float, longitude_min: float, longitude_max: float) -> Self:
+    def set_bounding_box(self, latitude_min: int, latitude_max: int, longitude_min: int, longitude_max: int) -> Self:
         self.query.bounding_box = TimeSeriesBoundingBox(longitude_min, latitude_min, longitude_max, latitude_max)
         return self
 
